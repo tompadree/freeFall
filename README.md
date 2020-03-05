@@ -1,5 +1,5 @@
 # FreeFall
-FreeFall is library for detecting free fall of the android device. It is based on the accelerometer sensor inside mobile phones.
+FreeFall is a library for detecting free fall of the android device. It is based on the accelerometer sensor inside mobile phones.
 https://developer.android.com/guide/topics/sensors/sensors_motion#sensors-motion-accel
 
 Project also contain sample app for testing the library.
