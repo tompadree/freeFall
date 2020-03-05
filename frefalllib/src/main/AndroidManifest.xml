@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.frefalllib" >
+
+    <application>
+        <service
+            android:name=".FreeFallService"
+            android:enabled="true"
+            android:stopWithTask="true" />
+
+    </application>
+
+</manifest>

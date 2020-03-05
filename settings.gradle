@@ -1,0 +1,2 @@
+include ':app', ':frefalllib'
+rootProject.name='FreeFall'

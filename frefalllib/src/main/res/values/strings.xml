@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FreFallLib</string>
+
+    <string name="channel_id">ChannelFreeFallService</string>
+
+    <string name="get_current_list">Get current list</string>
+    <string name="get_all">Get complete list</string>
+</resources>
