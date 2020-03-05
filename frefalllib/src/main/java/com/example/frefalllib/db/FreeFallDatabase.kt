@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase
  * @author Tomislav Curis
  */
 
-@Database(entities = [FallObject::class], version = 1)
+@Database(entities = [FallObject::class], version = 1, exportSchema = true)
 abstract class FreeFallDatabase : RoomDatabase() {
     abstract fun getFreeFallDao(): FreeFallDao
 

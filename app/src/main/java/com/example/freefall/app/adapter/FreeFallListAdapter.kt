@@ -19,17 +19,11 @@ class FreeFallListAdapter() : ListAdapter<FallObject, FreeFallListViewHolder>(Fr
         setHasStableIds(true)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FreeFallListViewHolder {
-        return FreeFallListViewHolder(
-            LayoutInflater.from(parent.context).inflate(
-                R.layout.item_fall_list,
-                parent,
-                false
-            )
-        )
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FreeFallListViewHolder
+            = FreeFallListViewHolder(LayoutInflater.from(parent.context).inflate
+        (R.layout.item_fall_list, parent, false))
 
-    override fun getItemViewType(position: Int) = position
+    override fun getItemId(position: Int): Long = getItem(position).timestamp.hashCode().toLong()
 
     override fun onBindViewHolder(holder: FreeFallListViewHolder, position: Int) {
 

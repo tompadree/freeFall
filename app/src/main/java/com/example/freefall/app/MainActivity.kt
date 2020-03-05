@@ -26,7 +26,6 @@ import com.example.frefalllib.db.FallObject
 
 class MainActivity : AppCompatActivity(), OnSensorChanged, OnFallsListFetch, View.OnClickListener {
 
-
     private lateinit var freeFallListAdapter: FreeFallListAdapter
     private var fallList = ArrayList<FallObject>()
 
@@ -57,7 +56,6 @@ class MainActivity : AppCompatActivity(), OnSensorChanged, OnFallsListFetch, Vie
 
         return true
     }
-
 
     private fun  startService() {
         FreeFallService.startService(this, this, this)
@@ -109,10 +107,10 @@ class MainActivity : AppCompatActivity(), OnSensorChanged, OnFallsListFetch, Vie
         with(fallsRv) {
             layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context)
             adapter = freeFallListAdapter
+            setHasFixedSize(true)
+            itemAnimator = null
         }
-
     }
-
 }
 
 

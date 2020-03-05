@@ -83,7 +83,6 @@ class FreeFallService: Service(), SensorEventListener, CoroutineScope {
     override val coroutineContext: CoroutineContext
         get() = Job() + Dispatchers.Default
 
-
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
 
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
@@ -151,7 +150,6 @@ class FreeFallService: Service(), SensorEventListener, CoroutineScope {
 
             }
         }
-
     }
 
     fun saveLastFall(fallObject: FallObject) {
@@ -188,7 +186,6 @@ class FreeFallService: Service(), SensorEventListener, CoroutineScope {
         }
 
         startForeground(1, notification)
-
     }
 
     fun showFallNotification(timeStamp: String, duration: String) {
